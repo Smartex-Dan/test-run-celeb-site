@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: radial-gradient(circle at the top left, #1a1a2e, #0f0f1a 60%);
+    background-color: #1a1a2e;
+}
+
+.membership-container{
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.membership-container h1{
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f5c77a;
+}
+
+.membership-container p{
+    color: #f5c77a;
+}
+
+.subtitle{
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+.plans{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.plan-card{
+    background: rgba(255, 255, 255, 0.05);
+    color: wheat;
+    backdrop-filter: blur (12px);
+    border-radius: 16px;
+    padding: 30px 25px;
+    width: 300px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plan-card:hover{
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transform: translateY(-8px)
+}
+
+.plan-card h2{
+    margin-bottom: 10px;
+}
+
+.price{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.plan-card ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+    display: block;
+}
+
+.plan-card ul li{
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    opacity: 0.8s;
+    display: block;
+    color: #f5c77a;
+}
+
+.plan-card button{
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.plan-card button:hover{
+    transform: translateY(-2px);
+    opacity: 0.9
+}
+
+.vip{
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+    border: 1.2px solid rgba(255, 215, 0, 0.04)
+}
+
+.celeb{
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+    border: 1.2px solid rgba(218, 186, 11, 0.04)
+}

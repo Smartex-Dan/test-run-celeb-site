@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pricing.css') }}">
+    <title> Upgrade to Premium | Membership Monarch</title>
+</head>
+
+<body>
+    <div class="membership-container">
+        <h1>Upgrade Your Experience</h1>
+        <p class="subtitle">Unlock exclusive features and connect deeper.</p>
+
+        <div class="plans">
+
+            <!--Regular Plan-->
+            <div class="plan-card regular">
+                <h2>Regular Member</h2>
+                <p class="price">$300/month</p>
+                <ul>
+                    <li>Unlimited Likes</li>
+                    <li>See who liked You</li>
+                    <li>Profile Boost</li>
+                    <li>No Ads</li>
+                </ul>
+
+                <a href="{{ url_for('payment') }}?plan=regular">
+                  <button>Upgrade to Regular</button>
+                </a>
+            </div>
+
+            <!--Premium Plan-->
+            <div class="plan-card premium">
+                <h2>Premium Member</h2>
+                <p class="price">$700/month</p>
+                <ul>
+                    <li>Everything in Regular</li>
+                    <li>Direct Message Celebrities</li>
+                    <li>Premium Badge on Profile</li>
+                    <li>Unlimited Messaging</li>
+                </ul>
+
+                <a href="{{ url_for('payment') }}?plan=premium">
+                    <button>Upgrade to Premium</button>
+                </a>
+            </div>
+
+             <div class="plan-card vip">
+                <h2>VIP Member</h2>
+                <p class="price">$1500/month</p>
+                <ul>
+                    <li>Everything in Premium</li>
+                    <li>Top Search Ranking</li>
+                    <li>Exclusive Celeb Only Lounge</li>
+                    <li>Verified VIP Badge</li>
+                </ul>
+
+                <a href="{{ url_for('payment') }}?plan=vip">
+                    <button>Upgrade to VIP</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

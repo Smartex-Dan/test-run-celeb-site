@@ -1,0 +1,232 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #0b0b0f;
+  color: #eaeaea;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 80px 8%;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: #bdbdbd;
+  max-width: 700px;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #f5c77a;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f5c77a;
+}
+
+#hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero h2 {
+  font-size: 3rem;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  letter-spacing: 0.8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #f5c77a, #d9a441);
+  color: #000;
+}
+
+.btn.primary:hover {
+  opacity: 0.85;
+}
+
+.btn.secondary {
+  border: 1px solid #f5c77a;
+  color: #f5c77a;
+}
+
+.btn.secondary:hover {
+  background: #f5c77a;
+  color: #000;
+}
+
+.hero-buttons, .cta-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+section h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#why p,
+#audience p {
+  margin-top: 15px;
+}
+
+#audience ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+#audience li {
+  margin-bottom: 10px;
+  color: #e0e0e0;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 15px;
+}
+
+#features {
+  background-color: #111118;
+}
+
+.feature {
+  margin-bottom: 30px;
+}
+
+.feature h4 {
+  color: #f5c77a;
+  margin-bottom: 8px;
+}
+
+#membership .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.plan {
+  background: #16161f;
+  padding: 30px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+}
+
+.plan h4 {
+  color: #f5c77a;
+  margin-bottom: 10px;
+}
+
+#join {
+  text-align: center;
+  background: radial-gradient(circle at top, #1a1a28, #0b0b0f);
+}
+
+#join h3 {
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+footer {
+  background: #000;
+  padding: 40px 8%;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

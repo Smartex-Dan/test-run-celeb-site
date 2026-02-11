@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+    <title>Reset Password | Membership Monarch</title>
+</head>
+
+<body>
+
+    <div class="auth-container">
+        <h1>Forgot Your Password?</h1>
+        <p class="subtitle">Enter your email and we'll send you a reset link</p>
+
+        <form class="auth-form">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@example.com" required>
+            
+            <button type="submit">Send Reset Link</button>
+        </form>
+
+        <p class="switch-link">
+            Remember your password? <a href="login.html">Back to Login</a>
+        </p>
+    </div>
+         
+</body>
+</html>

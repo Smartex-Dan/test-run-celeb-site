@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Membership Monarch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="logo">Membership Monarch</div>
+        <input type="text" placeholder="Search celebrities..." class="search-bar">
+        <div class="nav-profile">My Account</div>
+    </header>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="profile.jpg" alt="User" class="profile-pic">
+            <h3>@username</h3>
+            <button>Edit Profile</button>
+            <div class="vip-status">Status: Normal User</div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="celeb-card">
+                <img src="celeb1.jpg" alt="Celebrity">
+                <h3>Celebrity Name</h3>
+                <p>Actor • Musician • Influencer</p>
+                <div class="card-buttons">
+                    <button class="like-btn">Like</button>
+                    <button class="vip-btn">VIP Message</button>
+                </div>
+            </div>
+
+            <div class="celeb-card">
+                <img src="celeb2.jpg" alt="Celebrity">
+                <h3>Celebrity Name</h3>
+                <p>Model • TV Star</p>
+                <div class="card-buttons">
+                    <button class="like-btn">Like</button>
+                    <button class="vip-btn">VIP Message</button>
+                </div>
+            </div>
+
+            <div class="celeb-card">
+                <img src="celeb3.jpg" alt="Celebrity">
+                <h3>Celebrity Name</h3>
+                <p>Musician • Entrepreneur</p>
+                <div class="card-buttons">
+                    <button class="like-btn">Like</button>
+                    <button class="vip-btn">VIP Message</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <h2>Welcome, {{ email }} </h2>
+
+    <a href="{{ url_for('chat') }}">
+        <button>Start Chatting</button>
+    </a>
+
+
+</body>
+</html>

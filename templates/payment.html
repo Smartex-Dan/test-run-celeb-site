@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='payment.css') }}">
+    <title>Complete Payment | Membership Monarch</title>
+</head>
+
+<body>
+    
+    <div class="payment-container">
+        <h1>Complete Your Upgrade</h1>
+        
+        <h2>Selected Plan: {{ plan|capitalize}}</h2>
+
+        
+
+            <h2>Select Payment Method</h2>
+
+            <form class="payment-form">
+                <label>CardHolder Name</label>
+                <input type="text" placeholder="Matt Stevens" max="25" required>
+
+                <label>Card Number</label>
+                <input type="number" placeholder="1234-5678-9012-3456-7890" id="units" max="20" required>
+
+                <div class="row">
+                    <div>
+                        <label>Expiry Date</label>
+                        <input type="number" placeholder="MM/YY" required>
+                    </div>
+                    <div>
+                        <label>CVV</label>
+                        <input type="number" placeholder="123" max="3" required>
+                    </div>
+                </div>
+            
+
+                <button type="submit">Pay Now</button>
+            </form>
+
+            <h2>Select Payment Method</h2>
+
+                <!-- Main Card Payment -->
+                <button class="pay-btn" onclick="payWithCard()">Pay with Card</button>
+
+                <!-- OTHER OPTIONS BUTTON -->
+                <button id="otherBtn" class="other-btn" onclick="showOtherOptions()">Other Payment Options</button>
+
+                <!-- Hidden Other Methods -->
+                <div id="otherOptions" class="hidden">
+                    <button class="pay-btn" onclick="payWithPaypal()">Pay with PayPal</button>
+                    <button class="pay-btn" onclick="payWithZelle()">Pay with Zelle</button>
+                    <button class="pay-btn" onclick="payWithGiftCard()">Pay with Gift Card</button>
+                    <button class="pay-btn" onclick="payWithBitcoin()">Pay with Bitcoin</button>
+                </div>
+
+            </form>
+
+      
+        </div>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const plan = params.get("plan");
+
+            const status = document.getElementById("status");
+
+            if (plan === "regular") {
+                status.textContent = "Loading Regular Membership payment...";
+            }
+            else if (plan === "premium") {
+                status.textContent = "Loading Premium Membership payment...";
+            }
+            else if (plan === "VIP"){
+                status.textContent = "Loading VIP Membership payment....";
+            }
+            else {
+                status.textContent = "No plan selected. Go back and choose a plan.";
+            }
+
+
+            function showOtherOptions() {
+                document.getElementById("otherOptions").classList.remove("hidden");
+                document.getElementById("otherBtn").style.display = "none"; // hides button after click
+            }
+
+            function payWithCard() {
+                alert("Redirecting to secure card payment...");
+            }
+
+            function payWithPaypal() {
+                alert("Redirecting to PayPal...");
+                window.location.href = "https://www.paypal.com";
+            }
+
+            function payWithZelle() {
+                document.getElementById("status").textContent =
+                    "Send payment via Zelle to: yourname@email.com and include your username in the note.";
+            }
+
+            function payWithGiftCard() {
+                document.getElementById("status").textContent =
+                    "Enter your gift card code on the next page to complete payment.";
+            }
+
+            function payWithBitcoin() {
+                document.getElementById("status").textContent =
+                    "Send Bitcoin payment to wallet address: bc1qexamplewalletaddress. After payment, click 'I Have Paid'.";
+            }
+        </script>
+
+</body>
+</html>
